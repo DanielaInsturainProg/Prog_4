@@ -1,0 +1,5 @@
+SQLAlchemy==1.4.36
+PyMySQL==1.0.2
+colorama==0.4.4
+tabulate==0.8.9
+python-dotenv==0.19.2
