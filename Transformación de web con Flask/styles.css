@@ -1,0 +1,21 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.actions-column {
+    white-space: nowrap;
+    width: 1%;
+}
+
+footer {
+    margin-top: 40px;
+}
