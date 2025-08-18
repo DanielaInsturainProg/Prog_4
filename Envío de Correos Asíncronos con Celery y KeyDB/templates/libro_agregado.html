@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Libro agregado a tu biblioteca</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #4CAF50; color: white; padding: 10px; text-align: center; }
+        .content { padding: 20px; border: 1px solid #ddd; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Libro agregado correctamente</h1>
+        </div>
+        
+        <div class="content">
+            <p>Hola,</p>
+            <p>Has agregado un nuevo libro a tu biblioteca personal:</p>
+            
+            <ul>
+                <li><strong>Título:</strong> {{ titulo }}</li>
+                <li><strong>Autor:</strong> {{ autor }}</li>
+            </ul>
+            
+            <p>Gracias por usar nuestra aplicación.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Este correo fue generado automáticamente. La acción se realizó desde la IP: {{ ip }}</p>
+        </div>
+    </div>
+</body>
+</html>
