@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-3">{{ 'Editar' if book else 'Agregar' }} libro</h1>
+<form method="post">
+  <div class="mb-3">
+    <label class="form-label">Título</label>
+    <input class="form-control" name="title" value="{{ book.title if book else '' }}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Autor</label>
+    <input class="form-control" name="author" value="{{ book.author if book else '' }}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Género</label>
+    <input class="form-control" name="genre" value="{{ book.genre if book else '' }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Estado</label>
+    <select class="form-select" name="status">
+      {% for s in ["No leído","Leyendo","Leído"] %}
+        <option value="{{ s }}" {% if book and book.status==s %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit">Guardar</button>
+  <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancelar</a>
+</form>
+{% endblock %}
