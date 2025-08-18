@@ -1,0 +1,50 @@
+/* Estilos generales */
+body {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-color: #f8f9fa;
+}
+
+/* Tarjetas */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+/* Tablas */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.85em;
+    padding: 0.35em 0.65em;
+}
+
+/* Botones */
+.btn {
+    border-radius: 0.25rem;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}

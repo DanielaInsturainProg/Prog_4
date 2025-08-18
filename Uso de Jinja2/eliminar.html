@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Eliminar {{ libro.titulo }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-danger text-white">
+        <h2 class="mb-0">Eliminar Libro</h2>
+    </div>
+    <div class="card-body">
+        <div class="alert alert-warning">
+            <h4 class="alert-heading">¿Estás seguro?</h4>
+            <p>Estás a punto de eliminar el libro <strong>"{{ libro.titulo }}"</strong> de <strong>{{ libro.autor }}</strong>.</p>
+            <hr>
+            <p class="mb-0">Esta acción no se puede deshacer.</p>
+        </div>
+        
+        <form method="POST">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ url_for('index') }}" class="btn btn-secondary me-md-2">Cancelar</a>
+                <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
