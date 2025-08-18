@@ -1,0 +1,20 @@
+from pydantic import BaseModel, Field
+from typing import Optional, List
+
+
+class VaccineRecord(BaseModel):
+    country: str = Field(..., example="Panama")
+    indicator: str = Field(..., example="Immunization, measles (% of children ages 12-23 months)")
+    code: str = Field(..., example="SH.IMM.MEAS")
+    year: int = Field(..., example=2001)
+    value: Optional[float] = Field(None, description="Cobertura %, puede ser None si no hay dato")
+
+
+class ProvinceRecord(BaseModel):
+    province: str
+    year: int
+    value: Optional[float]
+
+
+class VaccineList(BaseModel):
+    data: List[VaccineRecord]
